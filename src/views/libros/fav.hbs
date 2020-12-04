@@ -1,0 +1,28 @@
+<div class="container p-3">
+    <div class="row " id="main" style="margin-top: 80px;font-size: 0.75em;">
+        <div class="col-md-4 mx-auto my-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/libros/fav" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" name="image" placeholder="Sube una portada">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" name="archivo" placeholder="Sube el texto">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">
+                        Save 
+                        </button>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

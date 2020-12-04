@@ -1,0 +1,63 @@
+<div class="container p-3">
+            <div class="row font-italic">
+                <h6 class="text-right">Perfil de {{user.username}}</h6>
+            </div>
+            <div class="row">
+                <h2>Mis Libros Favoritos</h2>  
+            </div> 
+            
+            <div class="row " id="main" style="margin-top: 40px;font-size: 0.75em;">
+                {{#each favoritos}} 
+                <div class="col-sm-4 col-md-4 col-lg-3 m-1"> 
+                    <div class="card" >
+                        <img class="card-img-top mx-auto" src="uploads/{{image}}" style="width:40%" alt="01">
+                        <div class="card-body">
+                        <h4 class="card-title">{{title}}</h4>
+                        <p class="m-2">{{ description }}</p>
+
+                        <a target="_blank" href="uploads/{{archivo}}" class="btn btn-dark m-2 ">Leer libro</a>
+                        <a href="/libros/delete/{{id}}" class="btn btn-danger  m-1">Quitar de favoritos</a>
+                        </div>
+                    </div>
+                </div>
+                {{else}}     
+            
+        {{/each}}
+        </div>
+    <div class="row m-5">
+                <h2>Mis Libros</h2>  
+                <div class="col-sm-3 col-md-3 col-lg-2 m-1"> 
+                    <a href="/libros/fav" class="btn btn-success">Sube tu libro</a>
+                </div> 
+            </div> 
+            
+            <div class="row " id="main" style="margin-top: 40px;font-size: 0.75em;">
+                {{#each libros}} 
+                <div class="col-sm-4 col-md-4 col-lg-3 m-1"> 
+                    <div class="card" >
+                        <img class="card-img-top mx-auto" src="uploads/{{image}}" style="width:40%" alt="01">
+                        <div class="card-body">
+                        <h4 class="card-title">{{title}}</h4>
+                        <p class="m-2">{{ description }}</p>
+                            
+                        <a target="_blank" href="uploads/{{archivo}}" class="btn btn-dark m-2">Leer libro</a>  
+                        <p>Publicado hace: {{ timeago created_at }}</p>
+                        <a href="/libros/delete/{{id}}" class="btn btn-danger d-inline m-1">Eliminar</a>
+                        
+
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>No tienes subido ningun libro.</p>
+                        <a href="/libros/fav">Sube el tuyo!</a>
+                    </div>
+                </div>
+            
+        {{/each}}
+        </div>
+    
+</div>

@@ -1,0 +1,58 @@
+ <!-- HEADER -->
+        <div class="row">
+            
+
+
+            <nav class="col-12 navbar navbar-expand-lg bg-dark navbar-dark justify-content-center position-relative">
+                    <div class="position-absolute">
+                        <a id="logo" href="/" class="navbar-brand text-white">MiBiblioteca</a>  
+                    </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-left ml-5">
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="/texto">Libros de Texto</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="/educa">Libros Educativos</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="/comic">Comic</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="/manga">Manga</a>
+                        </li><li class="nav-item mx-5">
+                            <a class="nav-link" href="/librosusuarios">Libros Anonimos</a>
+                        </li>
+                        
+                        {{#if user}}
+                        <li class="nav-item dropdown mx-5">
+                                <a class="nav-link " data-toggle="dropdown" href="#" >Mi Perfil</a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/profile">Mi Perfil</a>
+                                <a class="dropdown-item" href="/libros">Mis Libros</a>
+                                <a class="dropdown-item" href="/logout">Cerrar Sesión</a>  
+                                </div>                          
+                        </li>
+                        {{else}}
+                            
+                            <div class="col justify-content-end m-1">
+                                <ul class="navbar-nav text-left ml-5">
+                                    <li class="nav-item ">
+                                        <a href="/signin" type="button" class="btn btn-dark justify-content-end">Login/Register</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        {{/if}}
+                    </ul>
+
+                        
+                    
+                </div>
+                
+            </nav>  
+
+        </div>
